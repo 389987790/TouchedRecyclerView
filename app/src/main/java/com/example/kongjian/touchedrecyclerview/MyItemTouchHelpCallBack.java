@@ -79,6 +79,7 @@ public class MyItemTouchHelpCallBack extends ItemTouchHelper.Callback {
             //透明度动画
             viewHolder.itemView.setAlpha(1-Math.abs(dX)/viewHolder.itemView.getWidth());
         }else{
+            if (actionState != ItemTouchHelper.ACTION_STATE_DRAG)
             viewHolder.itemView.setAlpha(1f);
         }
 
